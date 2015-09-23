@@ -1,0 +1,10 @@
+### Citytalk ###
+alias ct='cd ~/web/citytalk; pwd;'
+alias web='cd ~/web/citytalk/web; pwd;'
+alias upload='cd ~/web/citytalk/default/upload; pwd;'
+alias html='cd ~/web/citytalk/html/web/ct; pwd;'
+alias js='cd ~/web/citytalk/default/js/ct; pwd;'
+alias css='cd ~/web/citytalk/default/css/ct; pwd;'
+alias lib='cd ~/web/citytalk/lib/com/ct; pwd;'
+alias sns='cd ~/web/citytalk-sns; pwd;'
+alias sevent='cd ~/web/citytalk-sevent; pwd;'
