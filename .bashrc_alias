@@ -1,0 +1,95 @@
+###1: Control ls command output ###
+## Colorize the ls output ##
+alias ls='ls -lG'
+
+## Use a long listing format ##
+alias ll='ls -lG'
+ 
+ 
+## Show hidden files ##
+alias l.='ls -ldh .* --color=auto'
+
+###2: Control cd command behavior ###
+alias .1='cd ../'
+alias .2='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias .7='cd ../../../../../../..'
+
+###3: Control grep command output ###
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+###4: Create parent directories on demand ###
+alias mkdir='mkdir -pv'
+#Gives you what is using the most space. Both directories and files. Varies on
+#current directory
+alias most='du -hsx * | sort -rh | head -10'
+# list folders by size in current directory
+alias usage="du -h --max-depth=1 | sort -rh"
+# Find a file from the current directory
+alias ff='find . -name '
+
+###5: Colorize diff output ###
+# install  colordiff package :)
+alias diff='colordiff'
+
+###6: Make mount command output pretty and human readable format ###
+alias mount='mount |column -t'
+
+###7: Command short cuts to save time ###
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+
+###8: Create a new set of commands ###
+alias now='date +"%A %Y-%m-%d %X"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+###9: Show open ports ###
+alias ports='netstat -tulanp'
+alias ping="time ping"
+
+###10: Debug web server / cdn problems with curl ###
+# get web server headers #
+alias header='curl -I'
+
+
+###11: Get system memory, cpu usage, and gpu memory info quickly ###
+# find out if remote server supports gzip / mod_deflate or not #
+alias headerc='curl -I --compress'
+
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+ 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+ 
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+ 
+## get GPU ram on desktop / laptop## 
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+#php artisan
+alias artisan='php artisan'
+
+#mysql color
+alias mysql=$(echo -e 'mysql --prompt="\x1B[31m\\u\x1B[34m@\x1B[32m\\h\x1B[0m:\x1B[36m\\d>\x1B[0m "')
+
+#shortcut key
+#Ctrl+L is also a nice quick way to clear the terminal.
+#shift+z+z quickly exit vi 
