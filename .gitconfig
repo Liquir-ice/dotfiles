@@ -1,0 +1,90 @@
+[user]
+	name = liquirice
+	email = liquirice@gmail.com
+[alias]
+    aa = add --all
+    bv = branch -vv
+    ba = branch -ra
+    bd = branch -d
+    ca = commit --amend
+    cb = checkout -b
+    cm = commit -a --amend -C HEAD
+    ci = commit -m
+    cp = cherry-pick
+    co = checkout
+    cat = log -p
+    dc = diff --cached
+    diff = diff --word-diff
+    di = diff
+    # Show a diff last commit
+    dlc = diff --cached HEAD^
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lf = log --grep="$1"
+    lfw = log -S
+    mm = merge --no-ff
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    st = status --short
+    tg = tag -a 
+    pu = push --tags
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+    un = reset --hard HEAD  
+    uh = reset --hard HEAD^
+    type = cat-file -t
+    dump = cat-file -p
+    last = log -1 HEAD
+    unstage = reset HEAD--
+    undo = reset --soft HEAD~1
+    showdel = log --diff-filter=D --summary
+    # Merge Conflict
+    ours = "!f() { git co --ours $@ && git add $@; }; f"
+    theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = true
+    pager = true
+#[color "branch"]
+#    current = yellow reverse
+#    local = yellow
+#    remote = green
+#[color "diff"]
+#    meta = yellow bold
+#    frag = magenta bold
+#    old = red bold
+#    new = green bold
+#[color "status"]
+#    added = yellow
+#    changed = green
+#    untracked = cyan
+[merge]
+    # Include summaries of merged commits in newly created merge commit messages
+    #log = true
+
+[branch]  
+    autosetuprebase = always
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[core]
+        editor = vim
+	filemode = false
+	excludesfile = /Users/lukeboh/.gitignore_global
+[push]
+	default = current
