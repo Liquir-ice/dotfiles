@@ -1,0 +1,16 @@
+.CFUserTextEncoding
+.DS_Store
+.Trash/
+.bash_history
+.ssh/
+.viminfo
+.wget-hsts
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
