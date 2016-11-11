@@ -1,0 +1,38 @@
+[
+	{ "keys": ["alt+shift+`"], "command": "unfold" },
+	{ "keys": ["alt+1"], "command": "fold_by_level", "args": {"level": 1} },
+	{ "keys": ["alt+2"], "command": "fold_by_level", "args": {"level": 2} },
+	{ "keys": ["alt+3"], "command": "fold_by_level", "args": {"level": 3} },
+	{ "keys": ["alt+4"], "command": "fold_by_level", "args": {"level": 4} },
+	{ "keys": ["alt+5"], "command": "fold_by_level", "args": {"level": 5} },
+	{ "keys": ["alt+6"], "command": "fold_by_level", "args": {"level": 6} },
+	{ "keys": ["alt+7"], "command": "fold_by_level", "args": {"level": 7} },
+	{ "keys": ["alt+8"], "command": "fold_by_level", "args": {"level": 8} },
+	{ "keys": ["alt+9"], "command": "fold_by_level", "args": {"level": 9} },
+	{ "keys": ["alt+`"], "command": "unfold_all" },
+	{ "keys": ["alt+tab"], "command": "fold_tag_attributes" },
+	{ "keys": ["super+d"], "command": "duplicate_line" },
+	{ "keys": ["super+e"], "command": "find_under_expand" },
+	{ "keys": ["super+g"], "command": "find_next" },
+	{ "keys": ["super+shift+g"], "command": "find_prev" },
+	{ "keys": ["super+alt+e"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["super+shift+h"], "command": "tag_indent_document" },
+	{ "keys": ["super+alt+a"], "command": "auto_complete" },
+	{ "keys": ["super+alt+a"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["super+shift+a"], "command": "alignment" },
+	{ "keys": ["super+shift+r"], "command": "reindent" , "args": { "single_line": false } },
+	// { "keys": ["super+shift+r"], "command": "exec", "args": {"cmd": ["$project_path/cordova/emulate"]} },
+	// { "keys": ["super+shift+r"], "command": "x_code_run","args": { "build_system": "Packages/User/sim-run.sublime-build" }},
+	// { "keys": ["super+shift+b"], "command": "x_code_run","args": { "build_system": "Packages/User/sim-build.sublime-build" }},
+	{ "keys": ["super+shift+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["ctrl+alt+f"], "command": "code_formatter" },
+	{ "keys": ["alt+super+up"], "command": "select_lines", "args": {"forward": false} },
+	{ "keys": ["alt+super+down"], "command": "select_lines", "args": {"forward": true} },
+	{ "keys": ["super+shift+h"], "command": "htmlprettify" }
+]
