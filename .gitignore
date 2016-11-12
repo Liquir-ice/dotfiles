@@ -5,6 +5,9 @@
 .ssh/
 .viminfo
 .wget-hsts
+.cache/
+.vim/
+bin/
 Applications/
 Desktop/
 Documents/
