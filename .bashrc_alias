@@ -90,6 +90,9 @@ alias artisan='php artisan'
 #mysql color
 alias mysql=$(echo -e 'mysql --prompt="\x1B[31m\\u\x1B[34m@\x1B[32m\\h\x1B[0m:\x1B[36m\\d>\x1B[0m "')
 
+#sublime
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
 #shortcut key
 #Ctrl+L is also a nice quick way to clear the terminal.
 #shift+z+z quickly exit vi 
